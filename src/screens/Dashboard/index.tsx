@@ -1,10 +1,35 @@
 import React from "react";
-import { Container, Title } from "./styles";
+import {
+  Container,
+  Header,
+  Photo,
+  User,
+  UserGreeting,
+  UserInfo,
+  UserName,
+  UserWrapper,
+  Icon,
+} from "./styles";
 
 const Dashboard = () => {
   return (
     <Container>
-      <Title>Dashboard</Title>
+      <Header>
+        <UserWrapper>
+          <UserInfo>
+            <Photo
+              source={{
+                uri: "https://avatars.githubusercontent.com/u/57016585?v=4",
+              }}
+            />
+            <User>
+              <UserGreeting>Olá, </UserGreeting>
+              <UserName>Luiz</UserName>
+            </User>
+          </UserInfo>
+          <Icon name="power" />
+        </UserWrapper>
+      </Header>
     </Container>
   );
 };
